@@ -1,0 +1,443 @@
+li{
+    list-style: none;
+}
+
+.top-white{
+    &::before{
+        content:url(../images/top-body-white.svg) !important;
+        
+    }  
+}
+
+.top-cartagena{
+    &::before{
+        content:url(../images/top-body-cartagena.svg) !important;
+        
+    } 
+}
+
+.bg-white{
+    background: white;
+}
+.bg-green{
+    background: #99c503;
+}
+
+.bg-cartagena{
+    background: #f2bd00;
+    background-image: url(../images/bg-historias-cartagena-19.svg);
+    background-size: cover;
+    padding-bottom: 200px;
+}
+
+.mascara-banner{
+    -webkit-mask-image: url('../images/mask-banner.svg');
+    -webkit-mask-mode: luminance;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+  -webkit-mask-size: 1230px;
+  width: 100%;
+}
+
+.alpha{
+    max-height: 390px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    margin-top: -100px;
+
+}
+
+.page-description{
+    margin:30px 0; 
+}
+
+.page-post{
+    display: flex;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom:30px;
+    .page-post-description{
+        background-color:#69a8d9 ;
+        color:white;
+        position: relative;
+        padding: 30px 20px;
+        &::before{
+            content: "";
+            position: absolute;
+            background-image:url(../images/page-post.svg) ;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: -78px;
+            min-width: 80px;
+            width: auto;
+            height: max-content;
+            top: 0;
+            filter: drop-shadow(-8px 0px 4px rgb(0,0,0,0.5));
+        }
+        h4{
+            font-family: alin-kid;
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+        }
+        a{
+            color:white;
+            &:hover{
+                color:white;
+            }
+        }
+    }
+    .page-post-image{
+        position: relative;
+        height: auto;
+        overflow: hidden;
+        min-width: 220px;
+        img{
+            position: absolute;
+            top:-999999px;
+            bottom:-999999px;
+            left:-999999px;
+            right:-999999px;
+            margin: auto;
+            height: 150%;
+        }
+
+    }
+}
+
+.line{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    justify-content: center;
+    
+    &::after{
+        position: absolute;
+    content: "";
+    width: 100%;
+    max-width: 220px;
+    height: 5px;
+    background: #fff;
+    bottom: -6px;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: rotate(-4deg);
+    }
+}
+
+.line-active{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    bottom: -12px;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: rotate(-4deg);
+}
+
+
+.comunidades-section{
+    margin:50px 0 30px 0;
+    h5{
+        font-family: alin-kid;
+        font-size: 30px;
+    }
+    .lista-comunidades{
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: alin-kid;
+        margin-top: 20px;
+        margin-bottom: 0;
+        li{
+            list-style: none;
+            a{
+                display: flex;
+                color: #fff;
+                margin-right: 20px;
+                background-image: url(../images/comunidad-fondo.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100% 100%;
+                padding: 20px 25px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+// camino amor page
+
+.menu-camino-amor{
+    ul {
+        padding: 0;
+        display: flex;
+        width:max-content;
+        margin:auto;
+        li{
+            margin-right: 50px;
+            position: relative;
+            display: flex;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 50%;
+                max-width: 220px;
+                height: 3px;
+                background: #fff;
+                right: -45px;
+                top: 50%;
+                border-top-left-radius: 100%;
+                border-bottom-right-radius: 100%;
+                transform: rotate(-60deg); 
+            }
+            a{
+                color:white;
+                font-family: alin-kid;
+                font-size: 25px;
+            }
+        }
+        li:last-child{
+            margin-right: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+}
+
+.head-camino-amor{
+    position: absolute;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    top: -70px;
+    left: -110px;
+    img{
+        height: 350px;
+    }
+    h3{
+        color:white;
+        position: absolute;
+        top: 66%; 
+        transform: rotate(-19deg);
+        font-family: alin-kid;
+        margin-left:10px;
+    }
+}
+
+.mapa-camino-amor {
+    min-height: 900px;
+    position: relative;
+    margin-top: 200px;
+}
+
+.mapa-camino-amor.cauca{
+    background-image:url('../images/mapa-camino-cauca.svg') ;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.pasos-container{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.paso-camino{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 33.33%;
+    margin: auto;
+    position: relative;;
+    img{
+        height: 105px;
+        margin-bottom: 15px;
+    }
+    h4{
+        font-family: alin-kid;
+        text-align: center;
+        font-size: 21px;
+        padding: 12px;
+    }
+
+}
+
+.travesia-t{
+    background-image: url(../images/travesia-bg.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.creacion-paso{
+    left: -100px;
+}
+.celebracion-paso{
+    right: -100px;
+}
+.travesia-paso{ 
+    top: -115px;
+}
+.llamada-paso{
+    top: -100px;
+}
+
+// HISTORIAS 
+
+.head-historias{
+    width:max-content;
+    margin:auto;
+    font-family: alin-kid;
+    text-align: center;
+    h3{
+        color:white;
+        font-size: 35px;
+        letter-spacing: 14px;
+}
+    h4{
+        color:#07345c;
+        font-size: 20px;
+    }
+}
+
+
+.ninos-historias{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    .nino-historia{
+        max-width: 270px;
+        min-width: 270px;
+        width:33.33%;
+        margin: auto;
+        .nino-historia-image{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+            img{
+                max-width: 210px;
+            }
+        }
+        .nino-name{ 
+            font-family: alin-kid;
+            background-image: url(../images/hoja-nombre.png);
+            background-size:100% 100% ;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            margin-top: -50px;
+            position: relative;
+        }
+    }
+
+}
+
+// historias - interna
+
+.nino-gallery-section{
+    width: 100%;
+    h4{
+        font-family: alin-kid;
+        color:#009cdd;
+    }
+}
+
+.mansory-gallery{
+    // display: flex;
+    // flex-wrap: wrap;
+    // width:100%;
+
+    .nino-pic{
+    //     width: calc(33.33% - 3px);
+    // position: relative;
+     overflow: hidden;
+     position: relative;
+    // margin: 15px;
+        img{
+            position: absolute;
+    top: -999999px;
+    bottom: -999999px;
+    left: -999999px;
+    right: -999999px;
+    margin: auto;
+            
+        }
+    }
+    .first-pic{
+        border-top-left-radius: 100px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    }
+    .second-pic{
+        border-top-left-radius: 50px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 70px;
+    }
+    .third-pic{
+        border-top-left-radius: 100px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 100px;
+    }
+    .fourth-pic{
+        border-top-left-radius: 100px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 100px;
+    }
+    .fifth-pic{
+        border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 70px;
+    }
+    .sixth-pic{
+        border-top-left-radius: 50px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 100px;
+    }
+
+}
+
+//repeat(auto-fill, minmax(33.33%, 1fr))
+
+.mansory-gallery {
+    display: grid;
+    grid-template-columns: 19% 19% 19% 19% 19%;
+    grid-gap: 20px 1.2%;
+    grid-auto-rows: minmax(280px, auto);
+    grid-auto-flow: dense;
+    padding: 10px;
+}
+
+.nino-pic {
+    padding: 1rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #929796;
+    border-radius: 5px;
+    &:nth-child(odd) {
+        
+    }
+}
+
+
+.span-2 {
+    grid-column-end: span 2;
+}

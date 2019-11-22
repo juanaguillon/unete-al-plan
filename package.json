@@ -1,0 +1,15 @@
+{
+  "name": "construirpaz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass --watch sass/style.scss:css/custom.css --style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.23.3"
+  }
+
+}

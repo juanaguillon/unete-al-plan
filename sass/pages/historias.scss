@@ -1,0 +1,54 @@
+.historia-item{
+    .historia-item-image{
+        position: relative;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        img{
+            height: 250px;
+        }
+        h3{
+            position: absolute;
+    color: #fff;
+    font-family: alin-kid;
+    top: 90px;
+    right: 30px;
+    font-size: 30px;
+        }
+        
+    }
+    p{
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 20px; 
+        background-image: url('../images/cifras-text-background.png');
+    }
+}
+.nav-v2{
+    justify-content: space-around;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    height: 65vh;
+    min-height: 350px;
+}
+.page-name{
+    color: white;
+    font-family: alin-kid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    h2{
+        font-size: 40px;
+    }
+}
+
+.bg-cauca{
+    
+}
+
+.historias-cauca{
+    background-image: url(../images/cauca-background.svg);
+}

@@ -1,0 +1,165 @@
+header {
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: url(../images/fondo-header.jpg);
+  background-position: top;
+  background-repeat: repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.header_figur {
+  position: absolute;
+}
+.figure_start {
+  width: 34px;
+}
+.figure_start1 {
+  left: 20vw;
+  top: 16vh;
+}
+.figure_start2 {
+  left: 70vw;
+  top: 16vh;
+}
+.figure_start3 {
+  left: 9vw;
+  top: 45vh;
+}
+.figure_start4 {
+  left: 74vw;
+  top: 48vh;
+}
+
+.figure_heart {
+  width: 180px;
+  left: 5vw;
+  top: 6vh;
+}
+.figure_moon {
+  width: 100px;
+  right: 6vw;
+  top: 11vh;
+}
+.figure_pencil {
+  width: 150px;
+  bottom: 27vh;
+  left: -2vw;
+}
+.figure_cicla {
+  width: 365px;
+    right: -10vw;
+    bottom: 35px;
+    z-index: 1;
+}
+
+.figure_suecia {
+  width: 150px;
+  right: 31vw;
+  bottom: 42vh;
+}
+.figure_plan {
+  width: 160px;
+  left: 35vw;
+  bottom: 40vh;
+}
+
+.site-menu {
+  li {
+    font-family: alin-kid;
+    a {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 5px;
+        background: #fff;
+        bottom: -12px;
+        border-top-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        transform: rotate(-4deg);
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.little-menu {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  max-width: 1400px;
+  width: 100%;
+  margin: 15px auto;
+  .redes {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    li {
+      list-style: none;
+      display: flex;
+      margin-bottom: 35px;
+      justify-content: center;
+      img {
+        height: 20px;
+      }
+    }
+  }
+  .options {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    li {
+      list-style: none;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: flex;
+        color: white;
+      }
+    }
+  }
+}
+
+header .redes a {
+  color: white;
+}
+
+.logo-unete-plan img {
+  width: 390px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+aside {
+  position: absolute;
+  right: 50px;
+  ul {
+    padding: 0;
+    li {
+      color: white;
+    }
+  }
+}
+
+section {
+  padding: 30px;
+}
+
+.seccion {
+  margin-bottom: 40px;
+}
