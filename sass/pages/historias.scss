@@ -1,4 +1,6 @@
 .historia-item{
+    max-width: 380px;
+    margin: 0 30px;
     .historia-item-image{
         position: relative;
         margin-bottom: 20px;
@@ -51,4 +53,10 @@
 
 .historias-cauca{
     background-image: url(../images/cauca-background.svg);
+}
+
+@media (max-width:768px){
+    .historia-item{
+        margin:0 0 50px 0;
+    }
 }
