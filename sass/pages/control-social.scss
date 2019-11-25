@@ -1,0 +1,24 @@
+@media (max-width: 991px) {
+  .page-post {
+    .page-post-image {
+      height: 200px;
+    }
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .comunidades-section .lista-comunidades li a {
+    margin-right: 0;
+  }
+}
+@media (max-width: 580px) {
+  .control_social_section .alpha,
+  .monitoreo_derechos_section .alpha {
+    margin-left: -35px;
+    width: 103vw;
+    margin-top: -31px;
+    border-top-left-radius: 41px;
+    border-top-right-radius: 41px;
+  }
+}

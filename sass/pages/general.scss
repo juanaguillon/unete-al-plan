@@ -112,6 +112,11 @@ li {
   width: 100%;
   align-items: center;
   justify-content: center;
+  &.line_inline {
+    display: inline-flex;
+    width: auto;
+    padding: 5px 15px;
+  }
   &::after {
     position: absolute;
     content: "";
@@ -153,6 +158,7 @@ li {
     margin-bottom: 0;
     li {
       list-style: none;
+      margin: auto;
       a {
         display: flex;
         color: #fff;
@@ -304,46 +310,6 @@ li {
   }
 }
 
-.ninos-historias {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  .nino-historia {
-    max-width: 270px;
-    min-width: 270px;
-    width: 33.33%;
-    margin: auto;
-    .nino-historia-image {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      img {
-        max-width: 210px;
-      }
-    }
-    .nino-name {
-      font-family: alin-kid;
-      background-image: url(../images/hoja-nombre.png);
-      background-size: 100% 100%;
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      margin-top: -50px;
-      position: relative;
-    }
-  }
-}
-
-// historias - interna
-
-.nino-gallery-section {
-  width: 100%;
-  h4 {
-    font-family: alin-kid;
-    color: #009cdd;
-  }
-}
-
 .mansory-gallery {
   // display: flex;
   // flex-wrap: wrap;
@@ -420,8 +386,6 @@ li {
   text-transform: uppercase;
   color: #929796;
   border-radius: 5px;
-  &:nth-child(odd) {
-  }
 }
 
 .span-2 {

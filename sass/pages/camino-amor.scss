@@ -1,0 +1,41 @@
+@media (max-width: 991px) {
+  .paso-camino {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .creacion-paso {
+    left: 0px;
+  }
+  .llamada-paso,
+  .travesia-paso {
+    top: 0px;
+  }
+  .celebracion-paso {
+    right: 0px;
+  }
+
+  .head-camino-amor {
+    position: absolute;
+    justify-content: center;
+    top: -40px;
+    left: -40px;
+    width: 160px;
+    h3 {
+      top: 56%;
+      transform: rotate(-19deg);
+      font-size: 17px;
+      margin-left: 14px;
+    }
+  }
+  .mapa-camino-amor {
+    margin-top: 100px;
+  }
+}
