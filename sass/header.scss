@@ -1,3 +1,6 @@
+html {
+  overflow-x: hidden;
+}
 header {
   padding: 20px;
   margin: auto;
@@ -116,7 +119,7 @@ header {
     padding: 0;
     li {
       list-style: none;
-      margin-right: 20px;
+      margin-right: 26px;
       &:last-child {
         margin-right: 0;
       }
@@ -171,20 +174,60 @@ section {
   margin: auto;
 }
 
+.site-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    list-style: none;
+    margin: 0 15px;
+    a {
+      color: white;
+      display: flex;
+      flex-direction: column-reverse;
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      max-width: 120px;
+      text-align: center;
+    }
+    img {
+      height: 80px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
+  #toggle_bar_menu {
+    position: fixed;
+    z-index: 220;
+    right: 15px;
+    top: 18px;
+  }
+  .little-menu .options {
+    margin-right: 11px;
+  }
+
   .site_menu_container {
     position: fixed;
     top: 0;
     transform: translateX(100%);
     padding: 10px;
-    background: black;
+    background: #180433;
     right: 0;
     z-index: 200;
     height: 100%;
-    width: 60vw;
-    max-width: 350px;
+    width: 100vw;
+    transition: transform 0.5s;
+    &.show {
+      transform: translateX(0%);
+    }
     .site-menu {
       flex-direction: column;
+      margin-top: 32px;
     }
     li a {
       &:after {
@@ -212,14 +255,46 @@ section {
     width: 205px;
   }
   .figure_plan {
-    width: 150px;
-    bottom: 27vh;
+    width: 120px;
+    left: 19vw;
+  }
+
+  .figure_start4 {
+    top: 64vh;
   }
   .figure_moon,
   .figure_heart {
     display: none;
   }
+
+  .figure_suecia {
+    width: 120px;
+    right: 18vw;
+  }
+
   .figure_pencil {
-    width: 110px;
+    bottom: 22vh;
+    width: 100px;
+  }
+
+  header {
+    padding: 15px;
+    .redes a {
+      font-size: 19px;
+    }
+  }
+
+  .little-menu .options li a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .figure_suecia {
+    right: 32vw;
+  }
+  .figure_plan {
+    left: 30vw;
+    bottom: 32vh;
   }
 }

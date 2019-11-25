@@ -3,10 +3,15 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/custom.css">
 	<title>Construir paz</title>
 </head>
+
+
+
 
 <body>
 	<header>
@@ -31,9 +36,11 @@
 					</a>
 				</li>
 				<li><a href="#"><strong>ES</strong>/EN</a></li>
-				<li><a href="#">
+				<li>
+					<a id="toggle_bar_menu" href="#">
 						<i class="icon-bars"></i>
-					</a></li>
+					</a>
+				</li>
 			</ul>
 			<ul class="redes">
 				<li><a href="#"><i class="icon-facebook"></i></a></li>
@@ -79,7 +86,8 @@
 						</a>
 					</li>
 					<li><a href="#"><span>GALERÍA FOTOGRAFICA</span><img src="images/galeria-icono-01.svg" alt=""></a></li>
-					<li><a href="historias-vida.html"><span>HISTORIAS DE VIDA</span><img src="images/historias-icono-04.svg" alt=""></a></li>
+					<li><a href="historias-vida.html"><span>HISTORIAS DE VIDA</span><img src="images/historias-icono-04.svg"
+								alt=""></a></li>
 					<li><a href="#"><span>VIDEOS</span><img src="images/videos-icono-02.svg" alt=""></a></li>
 				</ul>
 			</div>
@@ -210,19 +218,13 @@
 					<div class="col-md-6">
 						<div class="caminos-amor">
 							<img src="./images/camino-amor-cauca-img-06.svg" alt="">
-							<h3>Cauca</h3>
+							<h3 class="line">Cauca</h3>
 						</div>
 					</div>
-					<!-- <div class="col-md-4">
-                                            <div class="caminos-amor">
-                                                <img src="./images/camino-amor-buenosaires-img-08.svg" alt="">
-                                            <h3>Buenos Aires</h3>
-                                            </div>
-                                        </div> -->
 					<div class="col-md-6">
 						<div class="caminos-amor">
 							<img src="./images/camino-amor-caribe-img-07.svg" alt="">
-							<h3>Caribe</h3>
+							<h3 class="line">Caribe</h3>
 						</div>
 					</div>
 				</div>
@@ -293,6 +295,9 @@
 			</div>
 		</div>
 
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/custom.js"></script>
+		
 	</footer>
 
 </body>
