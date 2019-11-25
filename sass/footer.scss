@@ -65,24 +65,29 @@ footer {
   }
 }
 
-
 .footer-social .redes a {
   color: white;
   font-size: 21px;
 }
 
-.footer-2{
+.footer-2 {
   position: relative;
-  z-index:1;
-  &::after{
+  z-index: 1;
+  &::after {
     display: none;
   }
 }
 
-.bg-footer-2{
+.bg-footer-2 {
   background-image: url(../images/footer-image-2.svg) !important;
-    background-position: bottom !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    padding-bottom: 350px;
+  background-position: bottom !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  padding-bottom: 350px;
+}
+
+@media (max-width: 768px) {
+  footer .copyright p {
+    padding: 0 15px;
+  }
 }

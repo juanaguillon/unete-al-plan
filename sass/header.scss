@@ -50,9 +50,9 @@ header {
 }
 .figure_cicla {
   width: 365px;
-    right: -10vw;
-    bottom: 35px;
-    z-index: 1;
+  right: -10vw;
+  bottom: 35px;
+  z-index: 1;
 }
 
 .figure_suecia {
@@ -162,4 +162,64 @@ section {
 
 .seccion {
   margin-bottom: 40px;
+}
+
+.site_menu_container {
+  position: relative;
+  top: -237px;
+  max-width: 700px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .site_menu_container {
+    position: fixed;
+    top: 0;
+    transform: translateX(100%);
+    padding: 10px;
+    background: black;
+    right: 0;
+    z-index: 200;
+    height: 100%;
+    width: 60vw;
+    max-width: 350px;
+    .site-menu {
+      flex-direction: column;
+    }
+    li a {
+      &:after {
+        display: none;
+      }
+      span {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+      flex-direction: row-reverse;
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  .logo-unete-plan img {
+    width: 260px;
+  }
+
+  .figure_start {
+    width: 24px;
+  }
+  .figure_cicla {
+    width: 205px;
+  }
+  .figure_plan {
+    width: 150px;
+    bottom: 27vh;
+  }
+  .figure_moon,
+  .figure_heart {
+    display: none;
+  }
+  .figure_pencil {
+    width: 110px;
+  }
 }

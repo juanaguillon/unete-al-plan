@@ -35,12 +35,6 @@ a {
   height: 36vh;
   left: -1.5%;
 }
-.site_menu_container {
-  position: relative;
-  top: -237px;
-  max-width: 700px;
-  margin: auto;
-}
 
 .inner_site_menu {
   position: absolute;
@@ -193,28 +187,26 @@ ul.site-menu li a:hover .inner_site_menu {
     padding: 20px;
   }
 
-  .cifras{
-    font-family: 'Bebas Neue', cursive;
+  .cifras {
+    font-family: "Bebas Neue", cursive;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
     text-align: center;
-    .c-negro{
-      color:#004e00;
+    .c-negro {
+      color: #004e00;
       line-height: 30px;
       font-size: 22px;
     }
-    .c-verde{
+    .c-verde {
       color: #000;
-      
+
       font-size: 38px;
       line-height: 1;
       margin-bottom: 5px;
+    }
   }
-  
-  }
-
 }
 
 .caminos-amor {
@@ -267,3 +259,28 @@ ul.site-menu li a:hover .inner_site_menu {
   }
 }
 
+@media (max-width: 768px) {
+  #section_one:before {
+    top: -48px;
+  }
+  .seccion-descripcion {
+    width: 100%;
+  }
+  .seccion-descripcion::after {
+    width: 170%;
+    left: -130px;
+  }
+  .seccion-plan {
+    margin: 40px auto 140px auto;
+  }
+  .use_power_title {
+    color: black !important;
+    margin-bottom: 20px;
+  }
+  .background-notebook {
+    background-image: none, url(../images/notebook-horizontal.svg);
+  }
+  .little-menu {
+    margin: 0 auto;
+  }
+}
