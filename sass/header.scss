@@ -201,12 +201,25 @@ section {
 }
 
 @media (max-width: 768px) {
-  #toggle_bar_menu {
+  .little-menu {
     position: fixed;
-    z-index: 220;
-    right: 15px;
-    top: 18px;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+    left: 0;
+    padding: 10px;
+    .options {
+      margin: 0 !important;
+    }
   }
+
+  .little-menu .redes {
+    margin: 0;
+    right: 10px;
+    top: 100%;
+    padding: 15px 0;
+  }
+
   .little-menu .options {
     margin-right: 11px;
   }
@@ -278,9 +291,14 @@ section {
   }
 
   header {
+    margin-top: 46px;
     padding: 15px;
     .redes a {
       font-size: 19px;
+    }
+    &.fixed {
+      box-shadow: 0 0 3px #0000009e;
+      background: #42039a;
     }
   }
 
