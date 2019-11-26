@@ -1,0 +1,51 @@
+.ninos-historias {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  .nino-historia {
+    width: 33.33%;
+    margin: 25px auto;
+    .nino-historia-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        max-width: 210px;
+      }
+    }
+    .nino-name {
+      font-family: "alin-kid";
+      background-image: url(../images/hoja-nombre.png);
+      background-size: 100% 100%;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      width: 75%;
+      margin: auto;
+      margin-top: -50px;
+      position: relative;
+    }
+  }
+}
+
+.nino-gallery-section {
+  width: 100%;
+  h4 {
+    font-family: "alin-kid";
+    color: #009cdd;
+  }
+}
+
+@media (max-width: 768px) {
+  .nino-historia {
+    width: 50% !important;
+  }
+  .bg-cartagena {
+    background-size: 110%;
+  }
+}
+@media (max-width: 498px) {
+  .nino-historia {
+    width: 100% !important;
+  }
+}
