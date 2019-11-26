@@ -2,9 +2,12 @@
   font-family: alin-kid;
   src: url("../fonts/ALIN_KID.ttf");
 }
+body {
+  font-family: Roboto;
+}
 
 p {
-  line-height: 18px;
+  line-height: 20px;
 }
 
 a {
@@ -34,6 +37,7 @@ a {
   width: 105%;
   height: 36vh;
   left: -1.5%;
+  z-index: -1;
 }
 
 .inner_site_menu {
@@ -119,6 +123,7 @@ ul.site-menu li a:hover .inner_site_menu {
 }
 
 .seccion-cifras {
+  margin-top: 95px;
   h2 {
     margin-bottom: 30px;
   }
@@ -166,19 +171,23 @@ ul.site-menu li a:hover .inner_site_menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 900;
     margin-top: 10px;
     text-align: center;
+    .c-small {
+      font-size: 22px;
+    }
+    .c-big {
+      font-size: 38px;
+    }
+
     .c-negro {
       color: #004e00;
-      line-height: 30px;
-      font-size: 22px;
+      line-height: 1;
     }
     .c-verde {
       color: #000;
-
-      font-size: 38px;
       line-height: 1;
-      margin-bottom: 5px;
     }
   }
 }

@@ -10,7 +10,9 @@ header {
   background-position: top;
   background-repeat: repeat;
   height: 100vh;
+  max-height: 750px;
   position: relative;
+  z-index: -1;
 }
 
 .header_figur {
@@ -18,16 +20,24 @@ header {
 }
 .figure_start {
   width: 34px;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: start_anim;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 }
 .figure_start1 {
+  animation-delay: 300ms;
   left: 20vw;
   top: 16vh;
 }
 .figure_start2 {
+  animation-delay: 500ms;
   left: 70vw;
   top: 16vh;
 }
 .figure_start3 {
+  animation-delay: 700ms;
   left: 9vw;
   top: 45vh;
 }
@@ -43,6 +53,10 @@ header {
 }
 .figure_moon {
   width: 100px;
+  animation-duration: 19s;
+  animation-name: moon_anim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   right: 6vw;
   top: 11vh;
 }
@@ -53,20 +67,20 @@ header {
 }
 .figure_cicla {
   width: 365px;
-  right: -10vw;
+  right: -3vw;
   bottom: 35px;
   z-index: 1;
 }
 
 .figure_suecia {
   width: 150px;
-  right: 31vw;
-  bottom: 42vh;
+  right: 34vw;
+  bottom: 38vh;
 }
 .figure_plan {
   width: 160px;
-  left: 35vw;
-  bottom: 40vh;
+  left: 37vw;
+  bottom: 38vh;
 }
 
 .site-menu {
@@ -96,7 +110,6 @@ header {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  max-width: 1400px;
   width: 100%;
   margin: 15px auto;
   .redes {
@@ -168,10 +181,12 @@ section {
 }
 
 .site_menu_container {
-  position: relative;
-  top: -237px;
+  position: absolute;
+  left: 50%;
+  top: -227px;
   max-width: 700px;
   margin: auto;
+  transform: translateX(-50%);
 }
 
 .site-menu {
@@ -230,6 +245,7 @@ section {
     transform: translateX(100%);
     padding: 10px;
     background: #180433;
+    left: 0;
     right: 0;
     z-index: 200;
     height: 100%;
@@ -314,5 +330,23 @@ section {
   .figure_plan {
     left: 30vw;
     bottom: 32vh;
+  }
+}
+
+@keyframes start_anim {
+  from {
+    filter: brightness(0.5);
+  }
+  to {
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes moon_anim{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(359deg);
   }
 }
