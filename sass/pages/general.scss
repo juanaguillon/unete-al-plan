@@ -13,6 +13,16 @@ li {
     content: url(../images/top-body-cartagena.svg) !important;
   }
 }
+.top-cauca {
+  &::before {
+    content: url(../images/top-body-cauca.svg) !important;
+  }
+}
+.top-cauca-dark {
+  &::before {
+    content: url(../images/top-body-cauca-dark.svg) !important;
+  }
+}
 
 .bg-white {
   background: white;
@@ -238,13 +248,15 @@ li {
   min-height: 900px;
   position: relative;
   margin-top: 200px;
-}
-
-.mapa-camino-amor.cauca {
-  background-image: url("../images/mapa-camino-cauca.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  &.cauca {
+    background-image: url("../images/mapa-camino-cauca.svg");
+  }
+  &.caribe {
+    background-image: url("../images/mapa-camino-caribe.svg");
+  }
 }
 
 .pasos-container {
