@@ -7,7 +7,7 @@ body {
 }
 
 p {
-  line-height: 18px;
+  line-height: 20px;
 }
 
 a {
@@ -37,6 +37,7 @@ a {
   width: 105%;
   height: 36vh;
   left: -1.5%;
+  z-index: -1;
 }
 
 .inner_site_menu {
