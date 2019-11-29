@@ -2,19 +2,6 @@
   font-family: alin-kid;
   src: url("../fonts/ALIN_KID.ttf");
 }
-body {
-  font-family: Roboto;
-}
-
-p {
-  line-height: 20px;
-}
-
-a {
-  &:hover {
-    text-decoration: none;
-  }
-}
 
 .titulo-1 {
   font-size: 40px;
@@ -31,55 +18,29 @@ a {
   position: relative;
 }
 #section_one:before {
-  content: url(../images/tabla_section.svg);
+  content: "";
+  background: url(../images/tabla_section.svg);
   position: absolute;
+  background-size: cover !important;
+  background-position: center !important;
   top: -105px;
-  width: 105%;
+  width: 100vw;
   height: 36vh;
-  left: -1.5%;
-  z-index: -1;
+  left: 0;
+  z-index: 1;
+}
+#section_one .container:first-child {
+  position: relative;
+  z-index: 2;
+}
+#section_one .container-fluid:first-child {
+  position: relative;
+  z-index: 2;
 }
 
-.inner_site_menu {
-  position: absolute;
-  top: 125%;
-  width: 225px;
-  display: none;
-  ul {
-    background-image: url(../images/sectionone-text-back.png);
-    background-size: 100% 100%;
-    padding: 10px;
-    font-size: 14px;
-    font-weight: 100;
-    text-align: left;
-    list-style: square;
-    li {
-      line-height: 1.2;
-      margin-bottom: 7px;
-    }
-    .inner_site_menu_child {
-      position: absolute;
-      left: 113%;
-      top: 0;
-      width: 145px;
-      &:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 36%;
-        right: 95%;
-        z-index: 0;
-        height: 3px;
-        background: #ff7f0a;
-      }
-    }
-  }
-}
 
-ul.site-menu li a:hover .inner_site_menu {
-  display: block;
-}
+
+
 .seccion-plan {
   display: flex;
   flex-direction: column;
@@ -104,6 +65,7 @@ ul.site-menu li a:hover .inner_site_menu {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  z-index: -1;
   .descripcion-contenido {
     position: relative;
     z-index: 2;
@@ -125,7 +87,7 @@ ul.site-menu li a:hover .inner_site_menu {
 .seccion-cifras {
   margin-top: 95px;
   h2 {
-    margin-bottom: 30px;
+    margin-bottom: 85px;
   }
 }
 
@@ -141,6 +103,9 @@ ul.site-menu li a:hover .inner_site_menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 40px;
+  
+
   h3 {
     font-family: alin-kid;
     color: white;
@@ -192,10 +157,34 @@ ul.site-menu li a:hover .inner_site_menu {
   }
 }
 
+.seccion-usa-poder{
+  position: relative;
+}
+
+
+.seccion-usa-poder::after{
+  position: absolute;
+    width: 300px;
+    content: url(../images/draw-plane-23.svg);
+    top: 80px;
+    z-index: -1;
+    left: 0;
+}
+
+.camino-amor-descricion{
+  max-width: 750px;
+    margin: auto auto 40px auto;
+}
+
+.caminos-list{
+  justify-content: space-evenly;
+}
+
 .caminos-amor {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 20px; 
   img {
     height: 200px;
     filter: drop-shadow(2px 0px 6px rgb(0, 0, 0, 0.5));
@@ -205,6 +194,8 @@ ul.site-menu li a:hover .inner_site_menu {
     color: #0073d2;
     width: 100%;
     margin-bottom: 31px;
+    font-family:alin-kid;
+    margin-top:15px;
     &:after {
       background: #0073d2;
     }
@@ -239,8 +230,21 @@ ul.site-menu li a:hover .inner_site_menu {
   margin-bottom: 30px;
   .brand-company {
     margin-right: 30px;
+    position: relative;
+    &::after {
+      content: "";
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      background: white;
+      right: -15px;
+      
+  }
     &:last-child {
       margin-right: 0;
+      &::after{
+        display: none;
+      }
     }
     img {
       height: 40px;
@@ -249,11 +253,12 @@ ul.site-menu li a:hover .inner_site_menu {
 }
 
 @media (max-width: 768px) {
-  #section_one:before {
-    top: -48px;
+  .seccion-camino-amor{
+    margin-top: 50px;
   }
   .background-notebook {
-    background-size: 210%, 100%;
+    background-size: 210%, 100% !important;
+    padding-top: 30px;
   }
   .seccion-descripcion {
     width: 100%;
@@ -262,7 +267,7 @@ ul.site-menu li a:hover .inner_site_menu {
     }
   }
   .titulo-1 {
-    font-size: 25px;
+    font-size: 34px;
   }
   .seccion-descripcion::after {
     width: 170%;
@@ -272,7 +277,6 @@ ul.site-menu li a:hover .inner_site_menu {
     margin: 40px auto 140px auto;
   }
   .use_power_title {
-    color: black !important;
     margin-bottom: 20px;
   }
   .background-notebook {
@@ -280,6 +284,9 @@ ul.site-menu li a:hover .inner_site_menu {
   }
   .little-menu {
     margin: 0 auto;
+  }
+  .caminos-amor{
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 1090px) {
@@ -289,16 +296,13 @@ ul.site-menu li a:hover .inner_site_menu {
 }
 
 @media (max-width: 380px) {
-  #section_one:before {
-    top: -40px;
-  }
   .seccion-descripcion::after {
-    width: 280%;
-    left: -300px;
+    width: 330%;
+    left: -300px; 
   }
 }
 @media (max-width: 325px) {
-  .seccion-descripcion::after {
+  .seccion-descripcion::after { 
     width: 345%;
     left: -300px;
   }

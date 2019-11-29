@@ -9,11 +9,13 @@ header {
   background: url(../images/fondo-header.jpg);
   background-position: top;
   background-repeat: repeat;
+  background-attachment: fixed;
   height: 100vh;
   max-height: 750px;
   position: relative;
-  z-index: -1;
 }
+
+
 
 .header_figur {
   position: absolute;
@@ -63,44 +65,72 @@ header {
 .figure_pencil {
   width: 150px;
   bottom: 27vh;
-  left: -2vw;
+  left: -35px;
 }
 .figure_cicla {
   width: 365px;
-  right: -3vw;
-  bottom: 35px;
-  z-index: 1;
+    right: -135px;
+    bottom: 25px; 
+    z-index: 1;
 }
 
 .figure_suecia {
-  width: 150px;
+  img{
+      width: 120px !important;
+    }
   right: 34vw;
   bottom: 38vh;
 }
 .figure_plan {
-  width: 160px;
+  img{
+      width: 120px !important;
+    }
   left: 37vw;
   bottom: 38vh;
+}
+
+.contenedor-comarcas{
+  display: flex;
+    margin: 0px 0px 0 80px;
+    width: 355px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: -85px;
 }
 
 .site-menu {
   li {
     font-family: alin-kid;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 5px;
+      background: #fff;
+      bottom: -12px;
+      border-top-left-radius: 100%;
+      border-bottom-right-radius: 100%;
+      transform: rotate(-4deg);
+    }
     a {
       position: relative;
-      &::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 5px;
-        background: #fff;
-        bottom: -12px;
-        border-top-left-radius: 100%;
-        border-bottom-right-radius: 100%;
-        transform: rotate(-4deg);
-      }
+      
       &:hover {
         text-decoration: none;
+      }
+    }
+    span{
+      margin-top:12px;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    &:hover{
+      &::after{
+        z-index: 7;
       }
     }
   }
@@ -110,8 +140,9 @@ header {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  width: 100%;
+  width: 98%;
   margin: 15px auto;
+  transition: all 0.3s;
   .redes {
     position: absolute;
     right: 0;
@@ -148,8 +179,11 @@ header .redes a {
   color: white;
 }
 
-.logo-unete-plan img {
-  width: 390px;
+.logo-unete-plan{
+  position: relative;
+img {
+  width: 435px;
+}
 }
 
 header nav {
@@ -159,6 +193,16 @@ header nav {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
+}
+
+.nav-v2{
+  justify-content: space-around;
+  flex-direction: column;
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  height: 65vh;
+  min-height: 350px;
 }
 
 aside {
@@ -180,13 +224,114 @@ section {
   margin-bottom: 40px;
 }
 
+.nav-submenu {
+  position: relative;
+  height: 100%;
+  span{
+    margin-top: 10px;
+    z-index:6;
+  }
+}
+
+.nav-submenu:hover .submenu-list {
+  display: block !important;
+}
+
+.nav-submenu:hover .inner_site_menu {
+  display: block;
+}
+
+.inner_site_menu li:hover .inner_site_menu_child{
+  display: block;
+}
+
+.inner_site_menu {
+  position: absolute;
+  top: calc(100% - 40px);
+  left: calc(50% - 85px);
+  display: none;
+  width: 170px;
+  padding: 45px 0 0 0;
+  background-image: url(../images/sectionone-text-back.png);
+  background-size: 100% 100%;
+  z-index: 5;
+  ul {
+    
+    background-size: 100% 100%;
+    padding: 25px 10px 15px 15px;
+    font-size: 14px;
+    font-weight: 100;
+    text-align: left;
+    list-style: square;
+    li {
+      line-height: 1.2;
+      margin-bottom: 7px;
+      list-style: disc;
+      color:white;
+      position: relative;
+      &::after{
+        display: none;
+      }
+      &:hover{
+        color:#ffe300;
+      }
+      a{
+        align-items: baseline;
+        text-align: left;
+        transition: all 0.3s;
+        justify-content: flex-start;
+        &::after{
+          display: none;
+        }
+        &:hover{
+          color:#ffe300;
+        }
+      }
+    }
+    .inner_site_menu_child {
+      position: absolute;
+    display: none;
+    left: 100%;
+    padding-left: 35px;
+    top: 0;
+    ul{
+      background-image: url(../images/sub-sublist-back.png);
+     background-size: 100% 100%;  
+     width: 150px; 
+    }
+      &:before {
+        content: "";
+    position: absolute;
+    top: 15px;
+    transform: translateY(-50%);
+    width: 30px;
+    left: 22px;
+    z-index: -2;
+    height: 8px;
+    background: #FFC107; 
+      }
+    }
+    
+    // li:hover .inner_site_menu_child{
+    //   display: block;
+    // }
+  }
+}
+
 .site_menu_container {
   position: absolute;
   left: 50%;
   top: -227px;
-  max-width: 700px;
+  max-width: 750px;
+    width: 100%;
   margin: auto;
   transform: translateX(-50%);
+}
+
+.site_menu_2 {
+  position: initial;
+  max-width: 750px;
+  transform: none;
 }
 
 .site-menu {
@@ -195,23 +340,44 @@ section {
   padding: 0;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   li {
-    list-style: none;
     margin: 0 15px;
     a {
       color: white;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       text-decoration: none;
       justify-content: center;
       align-items: center;
       max-width: 120px;
+      margin: auto;
+      z-index: 6;
       text-align: center;
     }
     img {
       height: 80px;
     }
+  }
+}
+
+@media (max-width:1300px){
+
+  .figure_cicla {
+    right: -205px;
+  }
+
+}
+
+@media (max-width:1140px){
+  .figure_cicla {
+    width: 205px;
+    display: none;
+  }
+  .figure_pencil {
+    bottom: 22vh;
+    width: 100px;
+    display: none;
   }
 }
 
@@ -222,10 +388,16 @@ section {
     top: 0;
     z-index: 2000;
     left: 0;
-    padding: 10px;
+    padding: 15px 20px;
     .options {
       margin: 0 !important;
     }
+  }
+
+  .head-scroll{
+    background: #180433;
+      padding: 20px 20px;
+      transition: all 0.3s;
   }
 
   .little-menu .redes {
@@ -243,53 +415,93 @@ section {
     position: fixed;
     top: 0;
     transform: translateX(100%);
-    padding: 10px;
+    padding: 50px 10px;
     background: #180433;
     left: 0;
     right: 0;
     z-index: 200;
     height: 100%;
     width: 100vw;
-    transition: transform 0.5s;
+    transition: transform 0.5s ease-in-out;
+    overflow-y: auto;
     &.show {
       transform: translateX(0%);
+     
     }
     .site-menu {
       flex-direction: column;
       margin-top: 32px;
+      height: max-content;
+    margin: auto;
+    width: max-content;
+    align-items: center;
+    margin-top:25%;
+
+    li::after{
+      display: none;
+    }
+    li.nav-submenu{
+      display:flex; 
+      align-items: center;
+      flex-direction: column;
+    } 
+
     }
     li a {
+      
       &:after {
         display: none;
       }
       span {
-        margin-left: 10px;
-        font-size: 14px;
+        margin-top: 10px;
+        font-size: 16px;
       }
-      flex-direction: row-reverse;
+      flex-direction: row;
       img {
-        width: 30px;
+        max-width: 48px;
+        margin-right: 12px;
       }
     }
   }
+  .inner_site_menu{
+    position: relative !important;
+    top: initial !important;
+    padding: initial !important;
+    width: 200px;
+    left: -50%;
+    transform: translateX(50%);
+    ul {
+
+      .inner_site_menu_child{
+        position: relative !important;
+        padding-left: 0 !important;
+        left: 0px !important;
+        
+    }
+    li{
+      a{
+        max-width:100% !important;
+      }
+    }
+  } 
+}
+
 
   .logo-unete-plan img {
-    width: 260px;
-  }
+    width: 260px; 
+  } 
 
   .figure_start {
     width: 24px;
   }
-  .figure_cicla {
-    width: 205px;
-  }
+  
   .figure_plan {
-    width: 120px;
+    
     left: 19vw;
   }
 
   .figure_start4 {
-    top: 64vh;
+    top: 40vh;
   }
   .figure_moon,
   .figure_heart {
@@ -297,21 +509,32 @@ section {
   }
 
   .figure_suecia {
-    width: 120px;
     right: 18vw;
   }
 
-  .figure_pencil {
-    bottom: 22vh;
-    width: 100px;
+  .contenedor-comarcas{
+    display: block;
+    margin: auto;
+    width: max-content;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: inherit;
+    div{
+      margin:20px 0;
+    }
   }
 
   header {
-    margin-top: 46px;
     padding: 15px;
-    .redes a {
+    max-height: 500px;
+    justify-content: center;
+    .redes{
+        display: none;
+     a {
       font-size: 19px;
     }
+  }
     &.fixed {
       box-shadow: 0 0 3px #0000009e;
       background: #42039a;
@@ -321,15 +544,28 @@ section {
   .little-menu .options li a {
     font-size: 18px;
   }
+  .nav-submenu{
+    span{
+      flex-direction: initial !important;
+      align-items: center;
+      margin-top: 0 !important;
+      img{
+        max-width: 45px;
+        margin-right: 12px;
+      }
+    }
+  }
 }
 
 @media (max-width: 380px) {
   .figure_suecia {
-    right: 32vw;
+    right: calc(50% - 60px);
+    bottom: 26vh;
   }
   .figure_plan {
-    left: 30vw;
-    bottom: 32vh;
+   
+    left: calc(50% - 60px);
+    bottom: 15vh;
   }
 }
 

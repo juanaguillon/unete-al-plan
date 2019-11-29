@@ -4,6 +4,7 @@
   margin-top: 50px;
   .nino-historia {
     width: 33.33%;
+    min-width: 300px;
     margin: 25px auto;
     .nino-historia-image {
       display: flex;
@@ -23,8 +24,17 @@
       width: 75%;
       margin: auto;
       margin-top: -50px;
+      transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+      &:hover{
+        transform: rotate(8deg);
+      }
       h3{
         color:white;
+      }
+      a{
+        width: 100%;
+        justify-content: center;
+        display: flex;
       }
       position: relative;
     }

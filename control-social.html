@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/custom.css">
 	<title>Construir paz</title>
 </head>
@@ -32,7 +33,7 @@
 					</a>
 				</li>
 				<li><a href="#"><strong>ES</strong>/EN</a></li>
-				<li><a href="#">
+				<li><a href="#" id="toggle_bar_menu">
 						<i class="icon-bars"></i>
 					</a></li>
 			</ul>
@@ -43,34 +44,44 @@
 			</ul>
 		</div>
 		<nav class="nav-v2">
-			<div class="">
-				<ul class="site-menu">
-					<li>
-						<a href="">
-							<div class="inner_site_menu">
-								<ul>
-									<li>Monitoreo
-										<div class="inner_site_menu_child">
-											<ul>
-												<li>Centro Social</li>
-												<li>Monitoreo de derechos</li>
-											</ul>
-										</div>
-									</li>
-									<li>Derechos sexuales & Reproductivos</li>
-									<li>El camino del amor</li>
-									<li>Evaluación</li>
-								</ul>
+				<div class="site_menu_container site_menu_2">
+					<ul class="site-menu">
+						<li><a href="index.html"><img src="images/home-icon.svg" alt=""><span>INICIO</span></a></li>
+						<li class="nav-submenu">
+							<span>
+								<img src="images/proyecto-icono-03.svg" alt="">
+								<span>PROYECTO</span>
+							</span>
+							<div class="submenu-list">
+								<div class="inner_site_menu">
+									<ul>
+										<li>Monitoreo
+											<div class="inner_site_menu_child_wrap">
+												<div class="inner_site_menu_child">
+	
+													<ul>
+														<li><a href="control-social.html">Control Social</a></li>
+														<li><a href="monitoreo-derechos.html">Monitoreo de derechos</a></li>
+													</ul>
+												</div>
+											</div>
+	
+										</li>
+										<li><a href="#">Derechos sexuales & Reproductivos</a></li>
+										<li><a href="camino-amor-caribe.html">El camino del amor</a></li>
+										<li><a href="#">Evaluación</a></li>
+									</ul>
+								</div>
 							</div>
-							<span>PROYECTO</span>
-							<img src="images/proyecto-icono-03.svg" alt="">
-						</a>
-					</li>
-					<li><a href="">GALERÍA FOTOGRAFICA<img src="images/galeria-icono-01.svg" alt=""></a></li>
-					<li><a href="">HISTORIAS DE VIDA<img src="images/historias-icono-04.svg" alt=""></a></li>
-					<li><a href="">VIDEOS<img src="images/videos-icono-02.svg" alt=""></a></li>
-				</ul>
-			</div>
+	
+						</li>
+						<li><a href="galeria.html"><img src="images/galeria-icono-01.svg" alt=""><span>GALERÍA
+									FOTOGRAFICA</span></a></li>
+						<li><a href="historias-vida.html"><img src="images/historias-icono-04.svg" alt=""><span>HISTORIAS DE
+									VIDA</span></a></li>
+						<li><a href="videos.html"><img src="images/videos-icono-02.svg" alt=""><span>VIDEOS</span></a></li>
+					</ul>
+					</div>
 			<div class="page-name">
 				<h2>CONTROL SOCIAL</h2>
 			</div>
@@ -83,12 +94,12 @@
 			</div>
 
 		</div>
-		<div class="container">
+		<div class="container p-0">
 			<div class="row page-description">
-				<div class="col-md-3">
+				<div class="col-md-3 image-media-none">
 					<img src="./images/unete-hablar.svg" alt="">
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-9 p-0">
 					<p>
 						Suele existir una gran distancia entre las comunidades y sus administraciones locales. Las y los ciudadanos
 						no se sienten escuchados ni tomados en cuenta y frente a las promesas electorales que no se cumplen y los
@@ -104,7 +115,7 @@
 						de proposición de la comunidad hacia sus representantes políticos y la acción pública
 					</p>
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-9 p-0">
 					<p>Sin embargo, suelen padecer de recursos y de los conocimientos necesarios para poder llevar a cabo
 						ejercicios contundentes de control social. Además, las administraciones suelen ser reacias a este tipo de
 						iniciativas de participación y no facilitan la comunicación y la información necesaria.<br><br>
@@ -115,7 +126,7 @@
 						del proyecto Usa tu Poder para Construir Paz, se ha apoyado el control soci al de varios ciclos de gestión,
 						en el 2016, 2017 y 2018.</p>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 image-media-none">
 					<img src="./images/unete-hablar-2.svg" alt="">
 				</div>
 			</div>
@@ -148,20 +159,6 @@
 								como desarrollo rural y reintegración.</p>
 							<a href="#" class="line line_inline">Leer más</a>
 						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="comunidades-section">
-						<h5>Comunidades</h5>
-						<ul class="lista-comunidades">
-							<li><a href="#">Valle del Cauca</a></li>
-							<li><a href="#">Choco</a></li>
-							<li><a href="#">Choco</a></li>
-							<li><a href="#">Choco</a></li>
-							<li><a href="#">Choco</a></li>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -213,6 +210,7 @@
 				</div>
 			</div>
 		</div>
-
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/custom.js"></script>
 	</footer>
 </body>

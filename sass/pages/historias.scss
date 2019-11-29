@@ -1,12 +1,17 @@
 .historia-item{
     max-width: 380px;
     margin: 0 30px;
+    transition: all 0.3s;
+    &:hover .historia-item-image{
+        filter: drop-shadow(2px 4px 6px rgb(0,0,0,0.5));
+    }
     .historia-item-image{
         position: relative;
         margin-bottom: 20px;
         display: flex;
         align-items: center;
         flex-direction: column;
+        transition: all 0.3s;
         img{
             height: 250px;
         }
@@ -26,16 +31,15 @@
         padding: 20px; 
         background-image: url('../images/cifras-text-background.png');
     }
+    .nino-lugar {
+        height: 200px !important;
+        position: absolute;
+        left: 110px;
+        top: 70px;
+    }
+
 }
-.nav-v2{
-    justify-content: space-around;
-    flex-direction: column;
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    height: 65vh;
-    min-height: 350px;
-}
+
 .page-name{
     color: white;
     font-family: alin-kid;
@@ -49,6 +53,15 @@
 
 .bg-cauca{
     
+}
+
+.nino-description{
+    margin-bottom: 50px;
+    h3{
+        
+        font-family: alin-kid; 
+        color:#009cdd;
+    }
 }
 
 .historias-cauca{

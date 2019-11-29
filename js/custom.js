@@ -12,3 +12,14 @@ function toggleNavBarMenu() {
 }
 
 toggleNavBarMenu();
+
+
+$(document).scroll(function(){
+  var algocool = $(window).scrollTop()
+  if(algocool > 10){
+      $('.little-menu').addClass('head-scroll');
+  }else{
+      $('.little-menu').removeClass('head-scroll');
+  }
+  
+});

@@ -1,29 +1,44 @@
+body {
+  font-family: lato;
+}
+
+p {
+  line-height: 22px;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
 li {
   list-style: none;
 }
 
 $c-blue:#0073d2;
 
+
+
 .top-white {
   &::before {
-    content: url(../images/top-body-white.svg) !important;
+    background: url(../images/top-body-white.svg) !important;
   }
 }
 
 .top-cartagena {
   &::before {
-    content: url(../images/top-body-cartagena.svg) !important;
+    background: url(../images/top-body-cartagena.svg) !important;
   }
 }
 .top-cauca {
   &::before {
-    content: url(../images/top-body-cauca.svg) !important;
+    background: url(../images/top-body-cauca.svg) !important;
   }
 }
 .top-cauca-dark {
   &::before {
-    content: url(../images/top-body-cauca-dark.svg) !important;
-  }
+    background: url(../images/top-body-cauca-dark.svg) !important;
+  } 
 }
 
 .bg-white {
@@ -35,8 +50,17 @@ $c-blue:#0073d2;
 
 .bg-cartagena {
   background: #f2bd00;
-  background-image: url(../images/bg-historias-cartagena-19.svg);
-  background-size: cover;
+  background-image: url(../images/fondo-caribe.svg) !important;
+  background-size: cover !important;
+  background-position: right;
+  padding-bottom: 200px;
+}
+
+.bg-cauca {
+  background: #f2bd00;
+  background-image: url(../images/cauca-background-2-.svg) !important;
+  background-size: cover !important;
+  background-position: right;
   padding-bottom: 200px;
 }
 
@@ -54,7 +78,7 @@ $c-blue:#0073d2;
   display: flex;
   overflow: hidden;
   align-items: center;
-  margin-top: -100px;
+  margin-top:-65px;
 }
 
 .page-description {
@@ -96,6 +120,7 @@ $c-blue:#0073d2;
     }
     a {
       color: white;
+      font-family: alin-kid;
       &:hover {
         color: white;
       }
@@ -276,6 +301,8 @@ $c-blue:#0073d2;
   position: relative;
   img {
     height: 105px;
+    margin: auto;
+    width: 135px;
     margin-bottom: 15px;
   }
   h4 {
@@ -283,6 +310,10 @@ $c-blue:#0073d2;
     text-align: center;
     font-size: 21px;
     padding: 12px;
+  }
+  p{
+    font-family: alin-kid;
+    text-shadow: 1px 1px 4px rgb(91, 91, 91);
   }
 }
 
@@ -379,6 +410,45 @@ $c-blue:#0073d2;
     border-top-right-radius: 25px;
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 100px;
+  }
+}
+
+
+
+@media (max-width:768px){
+  .mansory-gallery{
+    grid-template-columns: 49% 49% !important; 
+  }
+  .image-media-none{
+    display: none;
+  }
+  .pasos-container{
+    .llamada-paso{
+      order:1;
+    }
+    .creacion-paso{
+      order:2;
+    }
+    .celebracion-paso{
+      order: 3;
+    }
+  }
+ .menu-camino-amor{
+  position: relative;
+   z-index: 2;
+}
+ .head-camino-amor{
+   position: relative;
+   z-index: 1;
+   display: none;
+ }
+  
+}
+
+
+@media (max-width:680px){
+  .mascara-banner{
+    -webkit-mask-size: 600px; 
   }
 }
 
