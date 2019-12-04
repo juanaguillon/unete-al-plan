@@ -8,7 +8,7 @@ p {
 
 a {
   &:hover {
-    text-decoration: none;
+    text-decoration: none !important;
   }
 }
 li {
@@ -299,6 +299,11 @@ $c-blue:#0073d2;
   width: 33.33%;
   margin: auto;
   position: relative;
+  a{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
   img {
     height: 105px;
     margin: auto;
@@ -310,6 +315,7 @@ $c-blue:#0073d2;
     text-align: center;
     font-size: 21px;
     padding: 12px;
+    color:white;
   }
   p{
     font-family: alin-kid;
@@ -494,10 +500,16 @@ $c-blue:#0073d2;
 .camino-amor-segmento-item{
   min-width: 300px;
     max-width: 520px;
-    margin: auto auto 50px auto;
+    margin: 0 auto 50px auto;
       h4{
         color:$c-blue;
         font-family: alin-kid;
+      }
+      ul{
+        padding-left:20px ;
+        li{
+            list-style: disc;
+        }
       }
       .segmento-galeria{
           .segmento-img{
@@ -606,5 +618,183 @@ $c-blue:#0073d2;
         }
       }
     }
+  }
+}
+
+// celebracion
+
+.sumary-caribe{
+  background:#75bfd8;
+  position: relative;
+  margin-top:200px ;
+  &::after{
+    position: absolute;
+    content: "";
+    background: url(../images/top-sumary-caribe-25.svg);
+    height: 285px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    top: -280px;
+    left: 0;
+    z-index: -1;
+  }
+}
+.sumary{
+  max-width: 850px;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  .sum-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    .sum-img{
+      width: 35%;
+      img{
+        height: 280px; 
+      }
+    }
+    .sum-info{
+      color:white;
+      font-size: 20px;
+      width: 65%;
+    padding: 0px 30px;
+      p{
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+// creacion
+.tabla-planes{
+  background: #5e3d1e;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 1140px;
+    margin: auto;
+    margin-bottom: 50px;
+  &::after{
+    position: absolute;
+    content:"";
+    background: url(../images/pizarra-barra.png);
+    background-size: 100% 100%;
+    top: calc(100% - 35px);
+    width: 110%;
+    height: 40px;
+    left: -5%;
+  }
+.pizarron{
+  background: #00682a;
+  padding: 30px 15px;
+  border-radius: 8px;
+  h3{
+    color:white;
+    font-family: alin-kid;
+    text-align: center;
+    max-width: 700px;
+    margin:auto;
+  }
+  .planes{
+    width: 100%;
+    margin: auto;
+    .lista-planes{
+      margin-top: 30px;
+      padding-left: 0;
+      .slick-dots{
+        bottom: -45px;
+      }
+      li{
+        color:white;
+        ul{
+          padding-left: 18px;
+          li{
+            list-style: disc !important;
+          }
+        }
+        .slick-initialized .slick-slide{
+          
+        }
+      }
+      .slick-dots li button:before{
+        content: "" !important;
+        background: url(../images/dot-list.png);
+        background-size:100% 100% ;
+      } 
+      .slick-dots li.slick-active button:before{
+        opacity: 1 !important;
+      }
+      
+    }
+  }
+}}
+
+
+// cifras celebracion
+
+.cifras-sumary {
+  max-width: 1140px;
+  margin: 30px auto;
+  .slick-prev:before {
+    content: url(../images/left-arrow.svg);
+    opacity: 1;
+}
+.slick-next:before {
+  content: url(../images/right-arrow.svg);
+  opacity: 1; 
+}
+.slick-dots li button:before{
+  content: "" !important;
+  background: url(../images/dot-list.png);
+  background-size:100% 100% ;
+} 
+.slick-dots li.slick-active button:before{
+  opacity: 1 !important;
+}
+.slick-dots{
+  bottom: -40px;
+}
+  .cifras-img{
+    padding: 15px;
+    img{
+      height: 180px;
+      margin: auto;
+    }
+  }
+  .cifras-valor{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bebas Neue';
+    line-height: 1;
+    width: max-content;
+    margin: auto;
+    span{
+      text-align: center;
+    }
+    .text-blue{
+      color:#4171b1;
+      font-size: 38px;
+    }
+    .text-blue-2{
+      color:#4171b1;
+      font-size: 25px;
+    }
+    .text-white{
+      font-size: 30px;
+    }
+  }
+}
+@media (max-width:1200px){
+  .cifras-sumary{
+    margin: 30px 0;
+  }
+}
+@media (max-width:700px){
+  .slick-initialized .slick-slide{
+    padding: inherit;
   }
 }

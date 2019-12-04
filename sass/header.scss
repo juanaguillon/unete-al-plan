@@ -144,7 +144,7 @@ header {
   margin: 15px auto;
   transition: all 0.3s;
   .redes {
-    position: absolute;
+    position: absolute; 
     right: 0;
     top: 50px;
     li {
@@ -202,6 +202,7 @@ header nav {
   width: 100%;
   margin: 0 auto;
   height: 65vh;
+  max-height: 500px;
   min-height: 350px;
 }
 
