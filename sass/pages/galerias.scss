@@ -30,12 +30,13 @@
     margin: 45px auto;
     background: url(../images/comunidad-fondo.png);
     background-size: 100% 100%;
-    a{
+    span{
         display: flex;
         font-family: alin-kid;
         color:white;
         font-size: 18px;
         padding: 20px;
+        cursor: pointer;
         
     }
 }

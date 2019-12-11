@@ -56,6 +56,8 @@
   }
 }
 
+
+
 .seccion-descripcion {
   padding: 0;
   width: 737px;
@@ -85,10 +87,12 @@
 }
 
 .seccion-cifras {
-  margin-top: 95px;
   h2 {
-    margin-bottom: 85px;
+    margin-bottom: 85px; 
   }
+}
+.pincipalescifras-container{
+  align-items: baseline;
 }
 
 .descripcion-cifras {
@@ -103,7 +107,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 40px;
+  width: calc(25% - 20px);
+  margin: 0 10px 40px 10px;
+  z-index: 1;
   
 
   h3 {
@@ -136,7 +142,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-weight: 900;
     margin-top: 10px;
     text-align: center;
     .c-small {
@@ -146,15 +151,19 @@
       font-size: 38px;
     }
 
-    .c-negro {
+    .c-verde {
       color: #004e00;
       line-height: 1;
     }
-    .c-verde {
+    .c-negro {
       color: #000;
       line-height: 1;
     }
   }
+}
+
+.itemcifras:last-child{
+  margin-bottom: 0;
 }
 
 .seccion-usa-poder{
@@ -169,6 +178,31 @@
     top: 80px;
     z-index: -1;
     left: 0;
+}
+
+@media (max-width:1200px){
+  .seccion-usa-poder::after{
+    display: none;
+  }
+}
+
+@media (max-width:991px){
+  .seccion-usa-poder::after{
+    top:-20px;
+  }
+  .itemcifras{
+    width: calc(50% - 20px); 
+  }
+  .responsive-expand{
+    width:100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width:600px){
+  .itemcifras{
+    width: calc(100% - 20px); 
+  }
 }
 
 .camino-amor-descricion{
@@ -257,11 +291,12 @@
     margin-top: 50px;
   }
   .page-name h2{
-    font-size: 32px;
+    font-size: 32px !important;
+    padding: 0 12px;
   }
   .background-notebook {
     background-size: 210%, 100% !important;
-    padding-top: 30px;
+    padding-top: 30px; 
   }
   .seccion-descripcion {
     width: 100%;

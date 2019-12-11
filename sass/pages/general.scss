@@ -48,6 +48,13 @@ $c-blue:#0073d2;
   background: #99c503;
 }
 
+@media (max-width:768px){
+  .top-cauca-dark{
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .bg-cartagena {
   background: #f2bd00;
   background-image: url(../images/fondo-caribe.svg) !important;
@@ -78,11 +85,19 @@ $c-blue:#0073d2;
   display: flex;
   overflow: hidden;
   align-items: center;
-  margin-top:-65px;
+  margin-top:-65px; 
 }
 
 .page-description {
   margin: 30px 0;
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+    margin-bottom: 30px;
+  }
+}
+@media (max-width:768px){
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+  padding: 0;
+  }
 }
 
 .page-post {
@@ -114,9 +129,7 @@ $c-blue:#0073d2;
     }
     p {
       font-size: 15px;
-      -webkit-line-clamp: 2;
-      text-overflow: ellipsis;
-      -webkit-box-orient: vertical;
+      position: relative;
     }
     a {
       color: white;
@@ -286,6 +299,12 @@ $c-blue:#0073d2;
   }
 }
 
+@media (max-width:1024px){
+  .cauca, .caribe{
+    background-size: cover;
+  }
+}
+
 .pasos-container {
   margin-bottom: 30px;
   position: relative;
@@ -341,6 +360,64 @@ $c-blue:#0073d2;
 }
 .llamada-paso {
   top: -100px;
+}
+
+@media (max-width:1280px){
+  .creacion-paso {
+    left: -70px;
+  }
+  .celebracion-paso {
+    right: -70px;
+  }
+}
+@media (max-width:1124px){
+   .creacion-paso {
+     left: -35px;
+   }
+   .celebracion-paso {
+     right: -35px;
+   }
+    .travesia-paso {
+      top: -60px;
+    }
+    .llamada-paso {
+      top: -115px;
+    }
+  // .paso-camino{
+  //   min-width: 330px;
+  // }
+  // .pasos-container{
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+}
+
+@media (max-width:1024px){
+  .pasos-container{
+       display: flex;
+       flex-direction: column;
+     }
+     .travesia-paso {
+      top: 0px;
+    }
+    .creacion-paso {
+      left: 0px;
+    }
+    .llamada-paso {
+      top:0px;
+    }
+    .celebracion-paso {
+      right: 0px;
+    }
+    .mapa-camino-amor{
+      max-width: calc(100% + 60px);
+      width: calc(100% + 60px);
+      left: -30px;
+    }
+}
+
+@media (max-width:768px){
+  
 }
 
 // HISTORIAS
@@ -501,6 +578,7 @@ $c-blue:#0073d2;
   min-width: 300px;
     max-width: 520px;
     margin: 0 auto 50px auto;
+    padding: 0 15px;
       h4{
         color:$c-blue;
         font-family: alin-kid;
@@ -528,6 +606,14 @@ $c-blue:#0073d2;
               }
           }
       }
+}
+.momento-duo-section{
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  .camino-amor-subpage-head{
+    margin: initial;
+  }
 }
 
 .galeria-small{
@@ -600,6 +686,7 @@ $c-blue:#0073d2;
   .logros-white{
     background: white;
     padding:20px;
+    box-shadow: 0px 3px 13px #00000085;
     ul{
       padding: 0;
       margin-bottom: 0;
@@ -617,6 +704,24 @@ $c-blue:#0073d2;
     left: 0;
         }
       }
+    }
+  }
+}
+
+@media (max-width:768px){
+.logros-tabla{
+  margin: 80px auto 130px auto;
+}
+  .logros-white li{
+    padding-left: 0 !important;
+    flex-direction: column-reverse;
+    border-bottom: 1.5px solid lightgray;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    &::after{
+      order:1;
+      position: relative !important;
+      margin-bottom: 10px;
     }
   }
 }
@@ -653,6 +758,7 @@ $c-blue:#0073d2;
     padding: 12px 0;
     .sum-img{
       width: 35%;
+      min-width: 550;
       img{
         height: 280px; 
       }
@@ -665,6 +771,20 @@ $c-blue:#0073d2;
       p{
         line-height: 25px;
       }
+    }
+  }
+}
+@media (max-width:870px){
+  .sum-item{
+    flex-direction: column;
+    .sum-info{
+      order:2;
+      width: 100% !important;
+      padding: 0 12px !important;
+    }
+    .sum-img{
+      order:1;
+      width:max-content !important;
     }
   }
 }
@@ -705,8 +825,20 @@ $c-blue:#0073d2;
     .lista-planes{
       margin-top: 30px;
       padding-left: 0;
+      .slick-prev:before {
+        content: url(../images/left-arrow.svg);
+        opacity: 1;
+    }
+    .slick-next:before {
+      content: url(../images/right-arrow.svg);
+      opacity: 1; 
+    }
       .slick-dots{
         bottom: -45px;
+      }
+      .slick-track{
+        display: flex;
+        align-items: center;
       }
       li{
         color:white;
@@ -715,9 +847,6 @@ $c-blue:#0073d2;
           li{
             list-style: disc !important;
           }
-        }
-        .slick-initialized .slick-slide{
-          
         }
       }
       .slick-dots li button:before{
@@ -731,6 +860,7 @@ $c-blue:#0073d2;
       
     }
   }
+  
 }}
 
 
@@ -797,4 +927,118 @@ $c-blue:#0073d2;
   .slick-initialized .slick-slide{
     padding: inherit;
   }
+}
+
+
+.lista-videos-monitoreo{
+  padding:24px 64px 24px 24px;
+    background: #808bc4;
+    border-radius: 35px;
+    position: relative;
+    margin-bottom: 30px;
+    min-width: 350px;
+    &::after{ 
+      content: url(../images/footer-tv.svg);
+      position: absolute;
+      height: 35px;
+      width: 80%;
+      left: 10%;
+      top: 95%;
+    }
+  .video-monitoreo{
+    height: 300px;
+    // border-radius: 25px;
+    overflow: hidden;
+    padding: 0px !important; 
+  }
+  .slick-list{
+    border-radius: 25px;
+  }
+  .slick-next{
+    right: calc(0% + 15px);
+    top: calc(45% - 30px);
+    width: 35px;
+    height: 35px;
+    border: 4px solid #545454;
+    border-radius: 50%;
+    overflow: hidden;
+    &::before{
+      content: "";
+      background: #e3e3e3;
+      width: 5px;
+      height: calc(100% + 8px);
+      z-index: 1;
+      left: calc(50% - 2.5px);
+      top: -4px;
+      position: absolute;
+      opacity: 1;
+      filter: drop-shadow(0px 0px 4px rgb(0,0,0,0.8));
+      transform: rotate(45deg);
+    }
+  }
+  .slick-prev{
+    left: calc(100% - 50px);
+    top: calc(30% - 30px );
+    border: 4px solid #545454;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background: #74709a;
+    overflow: hidden;
+    &::before{
+      content: "";
+    background: #e3e3e3;
+    width: 5px;
+    height: calc(100% + 8px);
+    z-index: 1;
+    left: calc(50% - 2.5px);
+    top: -4px;
+    position: absolute;
+    opacity: 1;
+    filter: drop-shadow(0px 0px 4px rgb(0,0,0,0.8));
+    transform: rotate(15deg);
+    }
+  }
+  
+}
+
+.use-tv{
+ font-weight: 600;
+ margin: 0 2px;
+}
+
+.com-do{
+  width: max-content;
+  margin: auto;
+  font-size: 15px;
+  top: -8px;
+  position: relative;
+}
+
+@media (max-width:600px){
+  .lista-videos-monitoreo{
+    padding: 20px 20px 50px 20px;
+    margin-top: 50px;
+    min-width: 100%;
+  }
+  .lista-videos-monitoreo .slick-prev{
+    left: calc(50% - 50px);
+    top: calc(100% - 25px );
+  }
+  .lista-videos-monitoreo .slick-next{
+    right: calc(50% - 50px);
+    top: calc(100% - 25px);
+  }
+  .com-do{
+    top:0;
+  }
+}
+@media (max-width:400px){
+  .video-monitoreo{
+    height: 180px !important;
+  }
+}
+
+.item-hide{
+  display: none !important;
 }

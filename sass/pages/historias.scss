@@ -17,11 +17,14 @@
         }
         h3{
             position: absolute;
-    color: #fff;
-    font-family: alin-kid;
-    top: 90px;
-    right: 30px;
-    font-size: 30px;
+            color: #fff;
+            font-family: alin-kid;
+            top: 90px;
+            right: 0px;
+            font-size: 30px;
+        }
+        a{
+            position: relative;
         }
         
     }
@@ -34,9 +37,10 @@
     .nino-lugar {
         height: 200px !important;
         position: absolute;
-        left: 110px;
-        top: 70px;
+        left: 60px;
+        top: 70px; 
     }
+    
 
 }
 
